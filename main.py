@@ -1,8 +1,8 @@
 import imbalance_calc as imbalance
 import requests
 
-bot_token = '7365113257:AAHp4mWkKaBCs_YtrHhIHvcmK4Leek4uhw0'
-chat_id = '-4577599177'
+bot_token = ''
+chat_id = ''
 
 def run_app(alert_level):
     with open('tickers.csv', 'r') as file:
