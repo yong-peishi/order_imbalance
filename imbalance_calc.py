@@ -2,21 +2,11 @@ import requests
 
 def depth_info(symbol, minimum):
     base_url = 'https://api.binance.com'
-    endpoint = '/api/v3/ticker/24hr'
-    params = {'symbol': symbol}
     depth_endpoint='/api/v3/depth'
     limit = 10
     depth_params = {'symbol': symbol, 'limit': limit}
 
     try:
-        response = requests.get(base_url + endpoint, params=params)
-        response.raise_for_status()  # Raise an exception for HTTP errors
-
-        data = response.json()
-        price = float(data['lastPrice'])
-
-        min_price = price * 
-
         depth_response = requests.get(base_url + depth_endpoint, depth_params)
         depth_response.raise_for_status()
 
